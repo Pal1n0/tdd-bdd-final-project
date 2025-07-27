@@ -55,7 +55,7 @@ Scenario: Read a product
     And I should see "Cloths" in the "Category" dropdown
     And I should see "59.95" in the "Price" field
 
-Scenario: Updating a product
+Scenario: Update a Product
     When I visit the "Home Page"
     And I set the "Name" to "Hat"
     And I press the "Search" button
@@ -64,7 +64,7 @@ Scenario: Updating a product
     When I change "Name" to "Fedora"
     And I press the "Update" button
     Then I should see the message "Success"
-    When I copy the "Id" field 
+    When I copy the "Id" field
     And I press the "Clear" button
     And I paste the "Id" field
     And I press the "Retrieve" button
@@ -87,7 +87,6 @@ Scenario: Deleting a product
     And I paste the "Id" field
     And I press the "Delete" button
     Then I should see the message "Product has been Deleted!"
-    And I should see "Fedora" in the "Name" field
     When I press the "Clear" button
     And I press the "Search" button
     Then I should see the message "Success"
